@@ -2,35 +2,35 @@ package it.csp.formazione.designpattern.strutturali.adapter.composition;
 
 import it.csp.formazione.designpattern.strutturali.adapter.Corrente;
 import it.csp.formazione.designpattern.strutturali.adapter.PresaCorrenteAdapter;
-import it.csp.formazione.designpattern.strutturali.adapter.PresaElettrica;
+import it.csp.formazione.designpattern.strutturali.adapter.PresaCorrente;
 
 public class PresaCorrenteAdapterImpl implements PresaCorrenteAdapter {
 
-	private PresaElettrica presaElettrica;
+	private PresaCorrente presaCorrente;
 	
 	public PresaCorrenteAdapterImpl()
 	{
-		presaElettrica = new PresaElettrica();
+		presaCorrente = new PresaCorrente();
 	}
 	
 	
 	@Override
 	public Corrente get120Volt() 
 	{
-		return presaElettrica.getCorrente();
+		return getPresaCorrente().getCorrente();
 	}
 
 	@Override
 	public Corrente get12Volt() 
 	{
-		Corrente c = presaElettrica.getCorrente();
+		Corrente c = getPresaCorrente().getCorrente();
 		return converti(c, 10);
 	}
 
 	@Override
 	public Corrente get3Volt() 
 	{
-		Corrente c = presaElettrica.getCorrente();
+		Corrente c = getPresaCorrente().getCorrente();
 		return converti(c, 40);
 	}
 
@@ -40,9 +40,9 @@ public class PresaCorrenteAdapterImpl implements PresaCorrenteAdapter {
 	}
 
 	
-	private PresaElettrica getPresaElettrica() 
+	private PresaCorrente getPresaCorrente() 
 	{
-		return presaElettrica;
+		return presaCorrente;
 	}
 
 }

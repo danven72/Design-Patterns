@@ -1,6 +1,6 @@
 package it.csp.formazione.designpattern.strutturali.adapter;
 
-public class PresaElettrica {
+public class PresaCorrente {
 	
 	public Corrente getCorrente()
 	{
