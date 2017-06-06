@@ -5,7 +5,7 @@ public class Rettangolo implements Forma {
 	@Override
 	public void disegna() 
 	{
-		System.out.println("Forma: RETTANGOLO");
+		System.out.println("Shape: RETTANGOLO");
 
 	}
 
