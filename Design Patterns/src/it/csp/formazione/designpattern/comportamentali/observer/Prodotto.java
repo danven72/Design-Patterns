@@ -31,15 +31,10 @@ public class Prodotto implements Observable {
 	@Override
 	public void notifyObservers() 
 	{
-		//Copio l'ArrayList perchè la Observer.update() potrebbe comportare la unsubscribe e ridurre le dimensioni dell'ArrayList
-		// Impedendo a tutti gli elementi di essere sottoscritti
-		List<Observer> copyClienti = new ArrayList<Observer>();
-		for (Observer o: getClientiList())
-		{
-			copyClienti.add(o);
-		}
-		
-		for (Observer consumatore:  copyClienti)
+		//Copio l'ArrayList perchè la Observer.update() potrebbe comportare la unsubscribe e 
+		//ridurre le dimensioni dell'ArrayList impedendo a tutti gli elementi di essere sottoscritti
+		List<Observer> copyObserverList = new ArrayList<Observer>(getClientiList());
+		for (Observer consumatore:  copyObserverList)
 		{
 			consumatore.update();
 		}
