@@ -3,7 +3,7 @@ package it.csp.formazione.designpattern.comportamentali.chainsofresponsability;
 /**
  * 
  * @author ventura
- * Rappresenta la richiesta che dovr√† essere gestita dalla opportuna implementazione di PurchasePower
+ * Rappresenta la richiesta che dovra'† essere gestita dalla opportuna implementazione di PurchasePower
  */
 public class PurchaseRequest 
 {
