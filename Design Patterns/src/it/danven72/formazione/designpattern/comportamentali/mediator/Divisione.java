@@ -1,4 +1,4 @@
-package it.danven72.formazione.designpattern.comportamentali.mediaor;
+package it.danven72.formazione.designpattern.comportamentali.mediator;
 
 public class Divisione implements Calcolo {
 
