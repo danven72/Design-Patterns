@@ -1,12 +1,12 @@
 package it.danven72.formazione.designpattern.comportamentali.interpreter;
 
-import it.danven72.formazione.designpattern.comportamentali.interpreter.InterpreterNumberClient.Language;
+import it.danven72.formazione.designpattern.comportamentali.interpreter.InterpreterNumberExector.Language;
 
 public class InterpreterDemo {
 
 	public static void main(String[] args) 
 	{
-		InterpreterNumberClient interpreterClient = new InterpreterNumberClient();
+		InterpreterNumberExector interpreterClient = new InterpreterNumberExector();
 		
 		InterpreterNumberContext context = new InterpreterNumberContext();
 		
